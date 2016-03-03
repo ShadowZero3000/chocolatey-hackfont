@@ -1,5 +1,5 @@
-﻿# The code structure for this is thanks to Ramiro Morales, https://github.com/ramiro
-# Thanks for a much improved methodology for installing these fonts!
+﻿# The code structure for this from the Inconsolata's source: https://chocolatey.org/packages/Inconsolata
+# updated thanks to suggestions from Ramiro Morales (https://github.com/ramiro)
 
 $name = 'hackfont'
 $version = '2.019'
