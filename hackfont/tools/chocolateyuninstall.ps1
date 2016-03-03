@@ -27,9 +27,12 @@ function Remove-FontFromRegistry($FileName) {
     $key = Get-Item $Path
     $props = @($key.GetValueNames() |
         Where-Object { $key.GetValue($_) -eq $FileName })
-
-    Remove-ItemProperty -Path $Path -Name $props
-    Write-Warning ('Removed these registry values: {0}' -f ($props -join ', '))
+    If ($props.count -gt 0) {
+        Remove-ItemProperty -Path $Path -Name $props
+        Write-Warning ('Removed these registry values: {0}' -f ($props -join ', '))
+    } Else {
+        Write-Warning ('Did not find registry values for: {0}' -f ($FileName))
+    }
 }
 
 # End segment
