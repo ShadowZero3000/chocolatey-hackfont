@@ -2,7 +2,7 @@
 # Thanks for a much improved methodology for installing these fonts!
 
 $name = 'hackfont'
-$version = '2.018'
+$version = '2.019'
 $dl_version = $version -replace '\.', '_'
 
 $url = "https://github.com/chrissimpkins/Hack/releases/download/v${version}/Hack-v${dl_version}-ttf.zip"
